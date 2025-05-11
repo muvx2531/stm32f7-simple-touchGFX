@@ -1,0 +1,7 @@
+../Core/Src/GT911.c:30:13:GT911_Reset_Sequence	1
+../Core/Src/GT911.c:61:16:GT911_WR_Reg	3
+../Core/Src/GT911.c:82:13:GT911_RD_Reg	2
+../Core/Src/GT911.c:104:16:GT911_ReadStatue	1
+../Core/Src/GT911.c:113:17:GT911_ReadFirmwareVersion	1
+../Core/Src/GT911.c:123:6:GT911_Scan	14
+../Core/Src/GT911.c:211:6:GT911_TEST	11
