@@ -26,8 +26,6 @@ public:
     virtual void function1(int value)
     {
         // Override and implement this function in Screen4
-    	boxProgress1.setValue(value);
-    	textProgress1.setValue(value);
     }
 
 protected:

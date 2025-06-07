@@ -25,14 +25,14 @@ Screen4ViewBase::Screen4ViewBase() :
 
     boxProgress1.setXY(250, 143);
     boxProgress1.setProgressIndicatorPosition(0, 0, 300, 10);
-    boxProgress1.setRange(0, 100);
+    boxProgress1.setRange(0, 300);
     boxProgress1.setDirection(touchgfx::AbstractDirectionProgress::RIGHT);
     boxProgress1.setBackground(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BOXPROGRESS_NORMAL_MEDIUM_ID));
     boxProgress1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 0));
     boxProgress1.setValue(60);
     add(boxProgress1);
 
-    textProgress1.setXY(313, 182);
+    textProgress1.setXY(330, 183);
     textProgress1.setProgressIndicatorPosition(12, 10, 150, 30);
     textProgress1.setRange(0, 100);
     textProgress1.setColor(touchgfx::Color::getColorFromRGB(157, 247, 30));
@@ -41,10 +41,10 @@ Screen4ViewBase::Screen4ViewBase() :
     textProgress1.setValue(60);
     add(textProgress1);
 
-    slider1.setXY(234, 266);
-    slider1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SLIDER_HORIZONTAL_THICK_TRACK_MEDIUM_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SLIDER_HORIZONTAL_THICK_FILLER_MEDIUM_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SLIDER_HORIZONTAL_THICK_ROUND_LIGHT_ID));
-    slider1.setupHorizontalSlider(16, 11, 0, 0, 100);
-    slider1.setValueRange(0, 100);
+    slider1.setXY(209, 267);
+    slider1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SLIDER_HORIZONTAL_THICK_TRACK_MEDIUM_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SLIDER_HORIZONTAL_THICK_FILLER_LARGE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SLIDER_HORIZONTAL_THICK_ROUND_LIGHT_ID));
+    slider1.setupHorizontalSlider(16, 11, 0, 0, 300);
+    slider1.setValueRange(0, 300);
     slider1.setValue(0);
     slider1.setNewValueCallback(sliderValueChangedCallback);
     add(slider1);

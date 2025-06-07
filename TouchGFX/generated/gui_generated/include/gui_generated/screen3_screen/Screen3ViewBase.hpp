@@ -13,7 +13,7 @@
 #include <touchgfx/widgets/graph/GraphElements.hpp>
 #include <touchgfx/widgets/graph/GraphLabels.hpp>
 #include <touchgfx/widgets/canvas/PainterARGB8888.hpp>
-extern volatile float sineValue;
+
 class Screen3ViewBase : public touchgfx::View<Screen3Presenter>
 {
 public:
@@ -28,12 +28,6 @@ public:
     virtual void function1()
     {
         // Override and implement this function in Screen3
-    	dynamicGraph1.addDataPoint(sineValue);
-
-    	    if (dynamicGraph1.getUsedCapacity() >= 1000) {
-    	        // Clear the entire graph buffer when it exceeds the limit
-    	        dynamicGraph1.clear();
-    	    }
     }
 
 protected:

@@ -1,7 +1,7 @@
-../Core/Src/GT911.c:30:13:GT911_Reset_Sequence	40	static
-../Core/Src/GT911.c:61:16:GT911_WR_Reg	24	static
-../Core/Src/GT911.c:82:13:GT911_RD_Reg	32	static
-../Core/Src/GT911.c:104:16:GT911_ReadStatue	24	static
-../Core/Src/GT911.c:113:17:GT911_ReadFirmwareVersion	16	static
-../Core/Src/GT911.c:123:6:GT911_Scan	56	static
-../Core/Src/GT911.c:211:6:GT911_TEST	16	static
+../Core/Src/GT911.c:34:13:GT911_Reset_Sequence	40	static
+../Core/Src/GT911.c:65:16:GT911_WR_Reg	24	static
+../Core/Src/GT911.c:117:13:GT911_RD_Reg	32	static
+../Core/Src/GT911.c:152:16:GT911_ReadStatue	24	static
+../Core/Src/GT911.c:161:17:GT911_ReadFirmwareVersion	16	static
+../Core/Src/GT911.c:171:6:GT911_Scan	56	static
+../Core/Src/GT911.c:259:6:GT911_TEST	32	static

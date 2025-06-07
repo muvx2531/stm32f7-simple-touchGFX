@@ -188,8 +188,8 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterARGB8888.hpp:34:7:virtual touchgfx::AbstractPainterARGB8888::~AbstractPainterARGB8888()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterARGB8888.hpp:42:5:touchgfx::PainterARGB8888::PainterARGB8888(touchgfx::colortype)	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterARGB8888.hpp:47:18:virtual void touchgfx::PainterARGB8888::setColor(touchgfx::colortype)	1
-../TouchGFX/generated/gui_generated/include/gui_generated/screen3_screen/Screen3ViewBase.hpp:28:18:virtual void Screen3ViewBase::function1()	3
-../TouchGFX/generated/gui_generated/include/gui_generated/screen3_screen/Screen3ViewBase.hpp:40:26:FrontendApplication& Screen3ViewBase::application()	1
+../TouchGFX/generated/gui_generated/include/gui_generated/screen3_screen/Screen3ViewBase.hpp:28:18:virtual void Screen3ViewBase::function1()	1
+../TouchGFX/generated/gui_generated/include/gui_generated/screen3_screen/Screen3ViewBase.hpp:34:26:FrontendApplication& Screen3ViewBase::application()	1
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<Screen3Presenter>::~View()	1
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<Screen3Presenter>::~View()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:29:7:touchgfx::Box::~Box()	1

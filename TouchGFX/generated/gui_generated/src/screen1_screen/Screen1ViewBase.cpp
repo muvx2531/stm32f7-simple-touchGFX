@@ -16,8 +16,8 @@ Screen1ViewBase::Screen1ViewBase() :
     box1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     add(box1);
 
-    image1.setXY(285, 64);
-    image1.setBitmap(touchgfx::Bitmap(BITMAP_TOP_ID));
+    image1.setXY(0, 0);
+    image1.setBitmap(touchgfx::Bitmap(BITMAP_NARIT_LOGO_ID));
     add(image1);
 
     button1.setXY(743, 423);

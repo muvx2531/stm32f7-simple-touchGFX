@@ -1,8 +1,12 @@
 #include "GT911.h"
 #include "CT_I2C.h"
 #include <stdio.h>
+#include "main.h"
 
 GT911_Dev Dev_Now,Dev_Backup;
+extern I2C_HandleTypeDef hi2c2;
+#define GT911_I2C_ADDR 0x29 // (0x5D << 1) // Adjust as needed
+
 
 uint8_t s_GT911_CfgParams[]=
 {
@@ -79,6 +83,37 @@ static uint8_t GT911_WR_Reg(uint16_t reg,uint8_t *buf,uint8_t len)
 	return ret;
 }
 
+//uint8_t GT911_WR_Reg(uint16_t reg, const uint8_t *data, uint16_t len)
+//{
+//    uint8_t addr[2+len];
+//    uint8_t res=0;
+//    uint8_t id=0;
+//    //reg = GT911_READ_XY_REG;
+//    addr[0] = (reg >> 8) & 0xFF;
+//    addr[1] = reg & 0xFF;
+//    for(int i =0;i<len;i++)
+//    {
+//    	addr[i+2] = data[i];
+//    }
+//    if (HAL_I2C_Master_Transmit(&hi2c2, 0xBA, addr,len+2, 100) == HAL_OK)
+//    	res =  1;
+//    else if (HAL_I2C_Master_Transmit(&hi2c2, 0xBB, addr,len+2, 100) == HAL_OK)
+//    	res =  2;
+//    else if (HAL_I2C_Master_Transmit(&hi2c2, 0x28, addr,len+2, 100) == HAL_OK)
+//    	res =  3;
+//    else if (HAL_I2C_Master_Transmit(&hi2c2,0x29, addr,len+2, 100) == HAL_OK)
+//    	res =  4;
+//    else
+//    {
+//    	while(HAL_I2C_Master_Transmit(&hi2c2,id, addr,len+2, 100) != HAL_OK)
+//    	{
+//    		id++;
+//    		osDelay(2);
+//    	}
+//    	res = 5;
+//    }
+//    return res;
+//}
 static void GT911_RD_Reg(uint16_t reg,uint8_t *buf,uint8_t len)
 {
 	uint8_t i;
@@ -100,6 +135,19 @@ static void GT911_RD_Reg(uint16_t reg,uint8_t *buf,uint8_t len)
 	}
   CT_I2C_Stop();
 }
+
+//uint8_t GT911_RD_Reg(uint16_t reg, uint8_t *data, uint16_t len)
+//{
+//    uint8_t addr[2];
+//    uint8_t res=0;
+//    addr[0] = (reg >> 8) & 0xFF;
+//    addr[1] = reg & 0xFF;
+//    if (HAL_I2C_Master_Transmit(&hi2c2, GT911_I2C_ADDR, addr, 2, 100) != HAL_OK)
+//    	res =  1;
+//    if (HAL_I2C_Master_Receive(&hi2c2, GT911_I2C_ADDR, data, len, 100) != HAL_OK)
+//    	res =  2;
+//    return res;
+//}
 
 static uint8_t GT911_ReadStatue(void)
 {
@@ -136,7 +184,7 @@ void GT911_Scan(void)
 		{
 			GT911_WR_Reg(GT911_READ_XY_REG, (uint8_t *)&Clearbuf, 1);
 			//printf("%x\r\n",buf[0]);
-			HAL_Delay(10);
+			osDelay(5);
 		}
 		else
 		{
@@ -211,13 +259,26 @@ void GT911_Scan(void)
 void GT911_TEST(void)
 {
 	uint8_t config_Checksum = 0,i;
-
+	uint8_t ID=0;
+	uint8_t buf[20];
 	printf("GT911_TEST\r\n");
 	GT911_Reset_Sequence();
 
+//	HAL_GPIO_WritePin(GT911_RST_PORT,GT911_RST_PIN,GPIO_PIN_RESET);
+//	HAL_Delay(100);
+//	HAL_GPIO_WritePin(GT911_INT_PORT,GT911_INT_PIN,GPIO_PIN_RESET);
+//	HAL_Delay(100);
+//	HAL_GPIO_WritePin(GT911_RST_PORT,GT911_RST_PIN,GPIO_PIN_SET);
+//	HAL_Delay(200);
+
 	CT_I2C_Init();
+//	while(HAL_I2C_IsDeviceReady(&hi2c2,ID++,1,100) != HAL_OK)
+//	{
+//		printf("GT911_Error\r\n");
+//	}
 
 	GT911_ReadStatue();
+//	GT911_WR_Reg(GT911_CONFIG_REG,buf,3);
 
 	//debug
 	GT911_RD_Reg(GT911_CONFIG_REG, (uint8_t *)&s_GT911_CfgParams[0], 186);

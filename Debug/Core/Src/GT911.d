@@ -35,7 +35,7 @@ Core/Src/GT911.o: ../Core/Src/GT911.c ../Core/Inc/GT911.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_qspi.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h \
- ../Core/Inc/CT_I2C.h
+ ../Core/Inc/CT_I2C.h ../Core/Inc/main.h
 ../Core/Inc/GT911.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:
 ../Core/Inc/stm32f7xx_hal_conf.h:
@@ -74,3 +74,4 @@ Core/Src/GT911.o: ../Core/Src/GT911.c ../Core/Inc/GT911.h \
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h:
 ../Core/Inc/CT_I2C.h:
+../Core/Inc/main.h:

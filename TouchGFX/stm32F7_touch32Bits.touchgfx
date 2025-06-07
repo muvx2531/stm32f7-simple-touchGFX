@@ -67,11 +67,9 @@
           {
             "Type": "Image",
             "Name": "image1",
-            "X": 285,
-            "Y": 64,
-            "Width": 230,
-            "Height": 353,
-            "RelativeFilename": "top.png"
+            "Width": 800,
+            "Height": 464,
+            "RelativeFilename": "NARIT_Logo.png"
           },
           {
             "Type": "Button",
@@ -262,14 +260,14 @@
             "FileNameBackground": "__generated\\alternate_theme_images_widgets_boxprogress_normal_medium.png",
             "IndicatorPositionWidth": 300,
             "IndicatorPositionHeight": 10,
-            "ProgressRangeMax": 100,
+            "ProgressRangeMax": 300,
             "ProgressInitialValue": 60
           },
           {
             "Type": "TextProgress",
             "Name": "textProgress1",
-            "X": 313,
-            "Y": 182,
+            "X": 330,
+            "Y": 183,
             "Width": 175,
             "Height": 50,
             "TextId": "__SingleUse_1EKU",
@@ -290,18 +288,18 @@
           {
             "Type": "Slider",
             "Name": "slider1",
-            "X": 234,
-            "Y": 266,
-            "Width": 316,
+            "X": 209,
+            "Y": 267,
+            "Width": 416,
             "Height": 32,
             "IsHorizontalSlider": true,
             "BackgroundUnselected": "__generated\\alternate_theme_images_widgets_slider_horizontal_thick_track_medium.png",
-            "BackgroundSelected": "__generated\\alternate_theme_images_widgets_slider_horizontal_thick_filler_medium.png",
+            "BackgroundSelected": "__generated\\alternate_theme_images_widgets_slider_horizontal_thick_filler_large.png",
             "Indicator": "__generated\\alternate_theme_images_widgets_slider_horizontal_thick_round_light.png",
             "BackgroundX": 16,
             "BackgroundY": 11,
-            "IndicatorMax": 100,
-            "ValueMax": 100
+            "IndicatorMax": 300,
+            "ValueMax": 300
           }
         ],
         "Interactions": [
